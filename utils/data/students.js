@@ -1,4 +1,5 @@
-import createId from '../createId';
+/* eslint-disable import/no-extraneous-dependencies */
+import { v4 as uuidv4 } from 'uuid';
 import studentsOnDom from '../../components/studentsOnDom';
 import houses from './houses';
 
@@ -13,7 +14,7 @@ const sortStudent = (e) => {
 
     // create the new student object
     students.push({
-      id: createId(students),
+      id: uuidv4(),
       name: student.value,
       house: sortingHat.house,
       crest: sortingHat.crest
